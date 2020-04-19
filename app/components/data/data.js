@@ -5,10 +5,11 @@ import moment from 'moment';
 import 'moment/locale/es' 
 
 
+    
+    
 
 class DataVisor extends Component{
-
-
+    
 
     
 render(){
@@ -17,20 +18,20 @@ render(){
         <View style={styles.maindiv}>
         <ScrollView>
             {
-            Data.sort(function(a,b){
-                const data=a.date.localeCompare(b.date)
-                return data;
+                Data.sort(function(a,b){
+                const dataorden=a.date.localeCompare(b.date)
+                return dataorden;
+                
             }),
+            
             Data.map((dataDetail)=>{
                
                 return (
-                <View key={Number.toString()}>
+                <View key={dataDetail.id.toString()}>
                     <View >
                         <Text>{moment(dataDetail.date).format("dddd D [de] MMMM")}</Text>
                     </View>
                     <View style={styles.oneItem}>
-                
-                
                         <Text>{moment(dataDetail.date).format("h:mm a")}</Text>
                         <View style={styles.pulse}>
                         <View>{dataDetail.heartRate}</View>

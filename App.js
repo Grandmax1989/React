@@ -2,7 +2,6 @@ import React  from 'react';
 import {StyleSheet, View } from 'react-native';
 import Header from './app/components/header/header'
 import Main from './app/components/main/main';
-
 import Data from './app/components/data/data';
 import Grafic from './app/components/grafic/grafic';
 import { NavigationContainer } from '@react-navigation/native';

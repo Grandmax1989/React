@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, ScrollView} from 'react-native';
 import {Line} from 'react-chartjs-2';
 import Data from "../../../data.json";
+import moment from 'moment'; 
 import 'moment/locale/es' 
 
 
@@ -14,10 +15,10 @@ const fulldata = DATA.map((DATA)=>DATA);
 fulldata.sort(function(a,b){
     const dataorden=a.date.localeCompare(b.date)
     return dataorden;
-    console.log(dataorden)
+    
 });
 
-const genericdate = fulldata.map((fulldata)=>fulldata.date);
+const genericdate = fulldata.map((fulldata)=>moment(fulldata.date).format("ddd D [de] MMM h:mm"));
 
 const heartpulse=fulldata.map((fulldata)=>fulldata.heartRate);
 
@@ -35,7 +36,7 @@ class Grafic extends Component{
                 labels:genericdate,
                 datasets:[
                     {
-                        label:"Febrero",
+                        label:"Pulsaciones por minuto",
                         backgroundColor:'rgba(128, 209, 232,0.75)',
                         data:heartpulse
                     },
