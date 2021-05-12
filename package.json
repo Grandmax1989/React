@@ -11,7 +11,7 @@
     "@react-navigation/bottom-tabs": "^5.2.7",
     "@react-navigation/native": "^5.1.6",
     "axios": "^0.19.2",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "expo": "~37.0.3",
     "moment": "^2.24.0",
     "react": "~16.9.0",
